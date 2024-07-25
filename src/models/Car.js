@@ -1,19 +1,23 @@
+const DataTypes = require('sequelize')
+const sequelize = require('../utils/connection')
+
 const Car = sequelize.define('car', {
-
-brand: {
+  brand: {
     type: DataTypes.STRING,
-    allowNull: false
-},
-    
-brand: {
+    allowNull: false,
+  },
+  model: {
     type: DataTypes.STRING,
-    allowNull: false
-},
-
-brand: {
+    allowNull: false,
+  },
+  year: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+  },
+  color: {
     type: DataTypes.STRING,
-    allowNull: false
-},
+    allowNull: false,
+  }
 });
 
 module.exports = Car
